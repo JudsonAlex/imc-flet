@@ -1,6 +1,7 @@
 import flet as ft
 
 from tabelaIMC import TabelaIMC
+from sectionsIMC import SectionIMC
 
 class App(ft.Column):
     def __init__(self):
@@ -11,6 +12,7 @@ class App(ft.Column):
         self.imc = ft.Text('', size=25, weight="BOLD")
         self.button = ft.FloatingActionButton("calcular", width=400, on_click=self.calc_imc)
         self.tabela = TabelaIMC().getTabela()
+        self.view2 = SectionIMC()
         self.changed_line = 0
         self.controls = [
             ft.Column(
@@ -24,7 +26,8 @@ class App(ft.Column):
                     ),
                     self.button,
                     self.imc,
-                    self.tabela
+                    self.tabela,
+                    self.view2
 
                 ],
                 horizontal_alignment=ft.CrossAxisAlignment.CENTER
@@ -56,7 +59,8 @@ class App(ft.Column):
             self.tabela.rows[4].color = ft.colors.RED_400
 
 
-        self.imc.value ="IMC: " + str(self.imc.value)
+        #self.imc.value ="IMC: " + str(self.imc.value)
+        self.view2 = SectionIMC(self.imc.value)
         self.update()
 
 
