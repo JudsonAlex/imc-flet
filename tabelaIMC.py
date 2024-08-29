@@ -11,36 +11,36 @@ class TabelaIMC():
             rows=[
                 ft.DataRow(
                         cells=[
-                            ft.DataCell(ft.Text("Menor que 18.5")),
-                            ft.DataCell(ft.Text("Magreza"))
+                            ft.DataCell(ft.Text("Menor que 18.5", color=ft.colors.BLACK)),
+                            ft.DataCell(ft.Text("Magreza", color=ft.colors.BLACK))
                         ],
                         color=ft.colors.WHITE
                 ),
                 ft.DataRow(
                         cells=[
-                            ft.DataCell(ft.Text("Entre 18.5 e 24.9")),
-                            ft.DataCell(ft.Text("Normal"))
+                            ft.DataCell(ft.Text("Entre 18.5 e 24.9", color=ft.colors.BLACK)),
+                            ft.DataCell(ft.Text("Normal", color=ft.colors.BLACK))
                         ],
                         color=ft.colors.WHITE
                 ),
                 ft.DataRow(
                         cells=[
-                            ft.DataCell(ft.Text("Entre 25 e 29.9")),
-                            ft.DataCell(ft.Text("Sobrepeso"))
+                            ft.DataCell(ft.Text("Entre 25 e 29.9", color=ft.colors.BLACK)),
+                            ft.DataCell(ft.Text("Sobrepeso", color=ft.colors.BLACK))
                         ],
                         color=ft.colors.WHITE
                 ),
                 ft.DataRow(
                         cells=[
-                            ft.DataCell(ft.Text("Entre 30 e 39.9")),
-                            ft.DataCell(ft.Text("Obesidade"))
+                            ft.DataCell(ft.Text("Entre 30 e 39.9", color=ft.colors.BLACK)),
+                            ft.DataCell(ft.Text("Obesidade", color=ft.colors.BLACK))
                         ],
                         color=ft.colors.WHITE
                 ),
                 ft.DataRow(
                         cells=[
-                            ft.DataCell(ft.Text("Maior que 40")),
-                            ft.DataCell(ft.Text("Obesidade Grave"))
+                            ft.DataCell(ft.Text("Maior que 40", color=ft.colors.BLACK)),
+                            ft.DataCell(ft.Text("Obesidade Grave", color=ft.colors.BLACK))
                         ],
                         color=ft.colors.WHITE
                 ),
