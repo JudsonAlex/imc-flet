@@ -36,7 +36,7 @@ class App(ft.Column):
 
 
     def calc_imc(self, e):
-        self.imc.value =round(float(self.peso.value) / float(self.altura.value)**2, 2)
+        self.imc.value =round(float(self.peso.value) / float(self.altura.value)**2, 1)
         print(self.imc.value)
         self.tabela.visible = True
         self.tabela.rows[self.changed_line].color = ft.colors.WHITE
@@ -45,13 +45,13 @@ class App(ft.Column):
         if self.imc.value < 18.5:
             self.tabela.rows[0].color = ft.colors.AMBER_100
             self.changed_line = 0
-        elif 18.5 < self.imc.value < 24.9:
+        elif 18.5 < self.imc.value <= 24.9:
             self.changed_line = 1
             self.tabela.rows[1].color = ft.colors.GREEN_100
-        elif 25 < self.imc.value < 29.9:
+        elif 25 <= self.imc.value <= 29.9:
             self.changed_line = 2
             self.tabela.rows[2].color = ft.colors.AMBER_100
-        elif 30 < self.imc.value < 39.9:
+        elif 30 <= self.imc.value <= 39.9:
             self.changed_line = 3
             self.tabela.rows[3].color = ft.colors.RED_200
         else:
